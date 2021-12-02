@@ -18,20 +18,23 @@ public class Cat{
         this.name   = name;
         this.age    = age;
         this.furColor   = furColor;
-        System.out.println("Mein name ist: " + name + " und bin " + age + " alt" + " mit der Fellfarbe " + furColor);
+        System.out.println("Mein Name ist: " + name + " und bin " + age + " alt" + " mit der Fellfarbe " + furColor);
     }
 
-    //Getter and Setter für alle Variablen (Kapselung)
+    // gibt die Adresse vom Object zueück aus der Klasse Cat
+    public Cat getAddress(){
+        return this;
+    }
+
+    /** Getter and Setter für alle Variablen (Kapselung) **/
     public String getName() {
         return name;
     }
-    
-    //mit dem IF kann ich den Namen nicht ändern der bleibt der gleiche wie im Konstrukter. So kann man den Zugriff von dritten Beschränken
+
+    //mit dem IF(false) kann ich den Namen nicht ändern der bleibt der gleiche wie im Konstrukter. So kann man den Zugriff von dritten Beschränken --> siehe vorriges commit
     public void setName(String name) {
-        if(false){
-        this.name = name;
-        
-    }}
+        this.name = name;   
+    }
 
     public int getAge() {
         return age;
@@ -49,4 +52,6 @@ public class Cat{
         this.furColor = furColor;
     }
     
+    
+
 }
